@@ -1,4 +1,5 @@
-# ☁️ Cloud Uploader Scripts
+<h1 align="center">Cloud Uploader Scripts</h1>
+<p align="center">C++ tools for cloud-based file uploads</p>
 
 While learning about Red Team stuff, I came across the idea that file transfer is something you may need during an engagement.
 
@@ -30,20 +31,8 @@ Uploader.exe
 
 So basically, you just run the `.exe`, and it automatically goes through everything inside that folder and starts uploading the files.
 
-> ⚠️ Be careful when testing. Running the .exe will automatically process files in its folder and all subfolders.
-
----
-
-## 📦 What's Inside
-
-I kept each cloud provider as a separate C++ file, so it's easy to see how each API works and how the upload process is handled.
-
-- `Dropbox.cpp` — Dropbox
-- `GoogleDrive.cpp` — Google Drive
-- `OneDrive.cpp` — OneDrive
-
-Each implementation uses the official API of its platform.
-
+> [!WARNING]
+> Running the `.exe` automatically processes files in its folder and all subfolders. Make sure you're running it in the right directory.
 ---
 
 ## 🚀 Compilation
@@ -105,8 +94,6 @@ The token needs permission to read and write files:
 ![OneDrive Access Token](images/onedrive-token.png)
 
 ---
-
-## 🛡️ Disclaimer
 
 > [!WARNING]
 > This project is for learning, research, Red Team labs, and authorized security testing only.
