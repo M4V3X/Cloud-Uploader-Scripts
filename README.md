@@ -1,19 +1,12 @@
 # ☁️ Cloud Uploader Scripts
 
-While learning about Red Team operations and researching different techniques, I found that file transfer can be an important part of an engagement.
+While learning about Red Team stuff, I came across the idea that file transfer is something you may need during an engagement.
 
-I noticed that Red Team operations may sometimes need to transfer collected files to an external location. One option is to set up a custom server or build your own infrastructure, but that also means dealing with hosting, domains, SSL certificates, and server management.
+At first, I thought about the usual way of doing it — setting up a server, getting a domain, configuring SSL, and dealing with all the extra infrastructure.
 
-Then I started thinking about another option.
+Then I thought, why build all of that when platforms like Dropbox, Google Drive, and OneDrive already exist and provide APIs for uploading files?
 
-There are already legitimate cloud storage platforms that people and organizations use every day, such as Dropbox, Google Drive, and OneDrive. These platforms already provide HTTPS, authentication, APIs, and the infrastructure needed to store files.
-
-So I wanted to explore the idea of building tools that could interact with these platforms using their official APIs instead of building a separate server from scratch.
-
-That's how this project started.
-
-I created separate C++ implementations for Dropbox, Google Drive, and OneDrive. Each one communicates with its platform using the official API and uploads files to a configured cloud storage account.
-
+So I decided to experiment with the idea and built a few C++ tools that use the official APIs of these platforms to upload files to my own cloud storage
 
 ---
 
