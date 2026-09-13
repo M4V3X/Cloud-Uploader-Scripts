@@ -1,5 +1,4 @@
-<h1 align="center">Cloud Uploader Scripts</h1>
-<p align="center">C++ tools for cloud-based file uploads</p>
+<h1 align="center">☁️ Cloud Uploader Scripts</h1>
 
 While learning about Red Team stuff, I came across the idea that file transfer is something you may need during an engagement.
 
