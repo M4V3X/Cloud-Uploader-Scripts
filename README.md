@@ -72,36 +72,43 @@ I used `-mwindows` so the executable runs without opening a console window.
 
 ## 🔑 Access Tokens
 
-Before using any of the tools, you need to create your own application and get an access token for the platform you want to test.
+Each tool needs an access token with the required permissions for uploading files to the selected cloud platform.
 
 ### Dropbox
 
-Create an application from the Dropbox App Console and configure the permissions required for file access.
+The token needs permission to upload and manage files:
 
-[Dropbox App Console](https://www.dropbox.com/developers/apps?utm_source=chatgpt.com)
+- `files.content.write`
+- `files.content.read`
+
+![Dropbox Access Token](images/dropbox-token.png)
 
 ---
 
 ### Google Drive
 
-Create a project, enable the Google Drive API, and configure OAuth credentials for your application.
+The token needs access to Google Drive:
 
-[Google Cloud Console](https://console.cloud.google.com/?utm_source=chatgpt.com)
+- `https://www.googleapis.com/auth/drive`
+
+![Google Drive Access Token](images/google-drive-token.png)
 
 ---
 
 ### OneDrive
 
-Register an application and configure the required Microsoft Graph permissions.
+The token needs permission to read and write files:
 
-[Microsoft Azure Portal](https://portal.azure.com/?utm_source=chatgpt.com)
+- `Files.ReadWrite.All`
+- `User.Read`
+
+![OneDrive Access Token](images/onedrive-token.png)
 
 ---
 
 ## 🛡️ Disclaimer
 
-This project was created for learning, research, Red Team labs, and authorized security testing.
-
-Please only use it on systems, files, and accounts that you own or have explicit permission to test.
-
-I am not responsible for any misuse of this project.
+> [!WARNING]
+> This project is for learning, research, Red Team labs, and authorized security testing only.
+>
+> Only use it on systems, files, and accounts you own or have permission to test.
