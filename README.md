@@ -12,9 +12,9 @@ So I decided to experiment with the idea and built a few C++ tools that use the 
 
 ## 💡 How It Works
 
-Each tool starts from the same directory where the executable is located.
+Once you run the `.exe`, it starts from the same folder where the executable is located.
 
-From there, it goes through the directory and all subdirectories, finds the files, and uploads them to the configured cloud storage account.
+It goes through the folder and all its subfolders, finds the files there, and starts uploading them to the configured cloud storage.
 
 For example:
 
@@ -28,32 +28,21 @@ Uploader.exe
     └── data.txt
 ```
 
-The uploader will go through everything inside that directory and process the files it finds.
+So basically, you just run the `.exe`, and it automatically goes through everything inside that folder and starts uploading the files.
 
-> ⚠️ Be careful when testing these tools. They can process files recursively from the executable's directory and its subdirectories.
+> ⚠️ Be careful when testing. Running the .exe will automatically process files in its folder and all subfolders.
 
 ---
 
 ## 📦 What's Inside
 
-| File              | Platform     |
-| ----------------- | ------------ |
-| `Dropbox.cpp`     | Dropbox      |
-| `GoogleDrive.cpp` | Google Drive |
-| `OneDrive.cpp`    | OneDrive     |
+I kept each cloud provider as a separate C++ file, so it's easy to see how each API works and how the upload process is handled.
 
-Each file is a separate implementation for a different cloud storage provider.
+- `Dropbox.cpp` — Dropbox
+- `GoogleDrive.cpp` — Google Drive
+- `OneDrive.cpp` — OneDrive
 
----
-
-## ⚙️ Requirements
-
-| Requirement          | Details                            |
-| -------------------- | ---------------------------------- |
-| **Compiler**         | MinGW-w64                          |
-| **Access Token**     | Required for the selected platform |
-
-The tools use the Windows WinHTTP library to make HTTPS requests.
+Each implementation uses the official API of its platform.
 
 ---
 
